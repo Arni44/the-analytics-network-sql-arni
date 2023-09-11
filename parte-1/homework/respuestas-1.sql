@@ -6,9 +6,23 @@ select * from stg.product_master where categoria = 'Electro'
 
 -- 2. Cuales son los producto producidos en China?
 
+  select name
+from stg.product_master
+where origin = 'China'
+group by "name"
+order by "name"
+
 -- 3. Mostrar todos los productos de Electro ordenados por nombre.
 
+select (name)
+from stg.product_master
+where category = 'Electro'
+order by "name"
+
 -- 4. Cuales son las TV que se encuentran activas para la venta?
+
+
+
 
 -- 5. Mostrar todas las tiendas de Argentina ordenadas por fecha de apertura de las mas antigua a la mas nueva.
 
